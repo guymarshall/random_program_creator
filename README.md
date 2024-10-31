@@ -1,0 +1,1 @@
+Use this program to generate strings of text, compile them using GCC and run them to see if they make valid C programs!
