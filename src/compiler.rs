@@ -2,6 +2,7 @@ use std::fs::write;
 use std::io::Error;
 use std::process::{Command, Output};
 
+#[inline(always)]
 pub(crate) fn compile_code(code: &str) -> bool {
     let filename: &str = "temp.c";
 
@@ -22,6 +23,7 @@ pub(crate) fn compile_code(code: &str) -> bool {
     false
 }
 
+#[inline(always)]
 pub(crate) fn run_code() -> bool {
     let run_result: Result<Output, Error> = Command::new("./temp_exec").output();
     run_result.is_ok()

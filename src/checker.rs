@@ -1,3 +1,4 @@
+#[inline(always)]
 pub(crate) fn code_is_valid(code: &str) -> bool {
     let contains_main: bool =
         code.contains("int main()") || code.contains("int main(int argc, char **argv)");

@@ -14,6 +14,7 @@ pub(crate) struct CombinationGenerator {
 }
 
 impl CombinationGenerator {
+    #[inline(always)]
     pub fn new(length: usize) -> Self {
         Self {
             length,
@@ -26,6 +27,7 @@ impl CombinationGenerator {
 impl Iterator for CombinationGenerator {
     type Item = String;
 
+    #[inline(always)]
     fn next(&mut self) -> Option<Self::Item> {
         if self.finished {
             return None;
